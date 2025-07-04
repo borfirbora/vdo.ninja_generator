@@ -1,26 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import './globals.css'; // Global CSS dosyalarınız
+import { ReduxProvider } from '@/redux/Provider'; // Oluşturduğunuz ReduxProvider'ı içe aktarın
 
 export const metadata = {
-  title: "Vdo.Ninja İçin Toplantı Oluşturucusu",
-  description: "Vdo.ninja üzerinden Podcast, Canlı yayın gibi etkinlikler için sese duyarlı, kaliteli linkler oluşturur.",
-};
+    title: {
+      default: 'Vdo.ninja Link Oluşturucu',
+      template: '%s | Vdo.ninja Link Oluşturucu',
+    },
+    description: 'örnek açıklamam'
+  }
+
 
 export default function RootLayout({ children }) {
+
+
   return (
-    <html lang="en">
+    <html lang="tr">
       <body>
-        {children}
+        <ReduxProvider>
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
