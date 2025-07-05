@@ -41,6 +41,11 @@ function MeetGenerate() {
         value={meetName}
         onChange={(e) => setMeetName(e.target.value)}
         placeholder="Toplantı konusunu girin"
+        onKeyUp={(e) => {
+          if (e.key === "Enter") {
+            submitHandler();
+          }
+        }}
       />
       <button
         onClick={submitHandler}
