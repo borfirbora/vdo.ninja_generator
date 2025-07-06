@@ -57,6 +57,7 @@ export default function Guests() {
           <button
             type="submit"
             className="px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 mt-4"
+            disabled={!form.guestName}
           >
             Katılımcı Ekle
           </button>
